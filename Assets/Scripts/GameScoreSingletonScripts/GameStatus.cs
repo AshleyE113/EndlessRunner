@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-/* This class handdles everything that has to deal with score and apple count. This is used to keep track of the score
- * and apples collected in the main game scene and stores the data so it can be displayed once the player dies
+/* This class handles everything that has to deal with score and apple count and works with the
+ * Score and AppleCountDisplay classes. This class is used to keep track of the score and apples
+ * collected in the main game scene and stores the data so it can be displayed once the player dies.
+ *
+ *This was made possible with this video since it helped me fixed an error that was in an earlier version of this class!
+ *https://www.youtube.com/watch?v=ivPiXM4vqsA&t=616s&ab_channel=contour3D
  */
 public class GameStatus : MonoBehaviour
 {

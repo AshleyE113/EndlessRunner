@@ -4,7 +4,8 @@ using UnityEngine;
 
 /* This class handles all of the player's movement controls, collision, and determines if the player is
  * dead or not. It has two Update functions (the usual and Fixed) due to the physics needed to make the
- * player jump. The bools are public so other classes can access them.
+ * player jump. The bools are public so other classes can access them. THis was possible thanks to the Unity forums
+ * and this video right here https://youtu.be/j6YFqhrEeYQ (for the bounds since those were a bit tricky).
  */
 public class Player : MonoBehaviour
 {

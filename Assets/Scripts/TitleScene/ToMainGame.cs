@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/* Once the button in the title screen or death scene is hit, it goes into the main game and sets the score back to 0.
+/* Once the button in the death scene is hit, it goes into the main game and sets the score back to 0.
  */
 public class ToMainGame : MonoBehaviour
 {
-    Scene scene;
     GameObject Gstatus;
     GameStatus gs;
     void Start()
@@ -26,7 +25,7 @@ public class ToMainGame : MonoBehaviour
     {
         SceneManager.LoadScene("MainGame", LoadSceneMode.Single); //Loads new scene. Single only loads the Game Scene.
 
-        //Resets these values
+       //Resets these values
         gs.p_score = 0;
         gs.a_count = 0;
         gs.startGame = true;

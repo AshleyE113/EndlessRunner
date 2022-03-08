@@ -437,7 +437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1205547038}
-  - component: {fileID: 1205547037}
+  - component: {fileID: 1205547039}
   m_Layer: 0
   m_Name: ToMainGame
   m_TagString: Untagged
@@ -445,18 +445,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1205547037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1205547036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 604a475df55f05b47b35f9f8ab0a4d48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1205547038
 Transform:
   m_ObjectHideFlags: 0
@@ -472,6 +460,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1205547039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205547036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d880957d2550ac4f98efcd24faf831b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1625326917
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,8 +650,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1205547037}
-        m_TargetAssemblyTypeName: ToMainGame, Assembly-CSharp
+      - m_Target: {fileID: 1205547039}
+        m_TargetAssemblyTypeName: TitleToMainGame, Assembly-CSharp
         m_MethodName: ButtonMoveScene
         m_Mode: 1
         m_Arguments:

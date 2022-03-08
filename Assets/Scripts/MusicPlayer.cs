@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/*This plays the BG music and pauses it once the player dies*/
+/*This plays the BG music and pauses it once the player dies. I brushed up on audio
+ with this source: https://gamedevbeginner.com/how-to-play-audio-in-unity-with-examples/
+ It's a very good website which breaks down different things in Unity and builds upon
+ them for more complex tasks.*/
 public class MusicPlayer : MonoBehaviour
 {
     GameObject Gstatus;
