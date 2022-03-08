@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
 
     //For Audio
     AudioSource jumpSFX;
-    AudioSource collectSFX;
+    [SerializeField] AudioSource collectSFX;
     [SerializeField] private AudioClip j_sfx;
     [SerializeField] private AudioClip collect_sfx;
     [SerializeField] private float sfx_vol = 0.5f;

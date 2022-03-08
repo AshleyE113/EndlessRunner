@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3832240815905724639}
   - component: {fileID: 3832240815905724636}
   - component: {fileID: 3832240815905724637}
-  - component: {fileID: 6225922412937381425}
   m_Layer: 0
   m_Name: Log
   m_TagString: Obstacle
@@ -99,21 +98,3 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &6225922412937381425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3832240815905724610}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b4085682d316be41afc3c46c5d670e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  start_val: 0.97
-  end_val: 4.55
-  inter_point: 0
-  x_pos: 0.97
-  y_pos: 0.94
-  z_pos: 0
