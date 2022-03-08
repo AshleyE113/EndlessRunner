@@ -777,7 +777,7 @@ MonoBehaviour:
   collectSFX: {fileID: 0}
   j_sfx: {fileID: 8300000, guid: 8dbb392f9ba8fef43b4050c9ed83b25b, type: 3}
   collect_sfx: {fileID: 8300000, guid: 4e1ccfd7f53fc154097b43636876dcbf, type: 3}
-  sfx_vol: 0.5
+  sfx_vol: 0.2
 --- !u!65 &2057374247
 BoxCollider:
   m_ObjectHideFlags: 0
