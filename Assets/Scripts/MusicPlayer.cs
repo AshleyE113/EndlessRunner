@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*This plays the BG music and pauses it once the player dies*/
 public class MusicPlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
     GameObject Gstatus;
     GameStatus gs;
     AudioSource gameMusic;
@@ -17,10 +17,9 @@ public class MusicPlayer : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (!gs.startGame)
+        if (!gs.startGame) //If start game is false, it pauses the music
         {
             gameMusic.Pause();
         }

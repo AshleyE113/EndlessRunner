@@ -4,25 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-/*Shows the number of Apples the Player collected*/
+/*This class shows the number of Apples the Player collected*/
 public class AppleCountDisplay : MonoBehaviour
 {
     GameObject Gstatus;
-    // Start is called before the first frame update
     void Start()
     {
-        Gstatus = GameObject.Find("GameStatus");
+        Gstatus = GameObject.Find("GameStatus"); //Looks for the GameStatusobj
     }
-
-    // Update is called once per frame
     void Update()
     {
-        if (Gstatus == null)
+        if (Gstatus == null) //If it's not there, don't execute the code outside of the if.
         {
             this.enabled = false;
             return;
         }
-
+        //For showing the amount of apples the player collected
         GameStatus gs = Gstatus.GetComponent<GameStatus>();
         GetComponent<TMP_Text>().text = "Apples: " + gs.a_count.ToString();
     }

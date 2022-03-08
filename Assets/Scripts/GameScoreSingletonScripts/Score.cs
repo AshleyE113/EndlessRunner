@@ -8,13 +8,12 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     GameObject Gstatus;
-    // Start is called before the first frame update
+
     void Start()
     {
         Gstatus = GameObject.Find("GameStatus");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Gstatus == null)
@@ -23,9 +22,8 @@ public class Score : MonoBehaviour
             return;
         }
 
+        //Displays Score in MainGame scene
         GameStatus gs = Gstatus.GetComponent<GameStatus>();
         GetComponent<TMP_Text>().text = "Score: " + gs.p_score.ToString();
-        Debug.Log("Score track in main scene");
-        //DontDestroyOnLoad(this.gameObject);
     }
 }

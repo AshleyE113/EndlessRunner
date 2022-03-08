@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float force;
     [SerializeField] private bool isGrounded = true;
     [SerializeField] private Rigidbody player_rb;
+
+    //Bools to check player's status and collisions
     public bool isHit = false;
     public bool isDead = false;
     public bool hitApple = false;
@@ -32,7 +34,7 @@ public class Player : MonoBehaviour
         player_rb = GetComponent<Rigidbody>();
         jumpSFX = GetComponent<AudioSource>();
         collectSFX = GetComponent<AudioSource>();
-        if (GameObject.Find("LevelManager") != null)
+        if (GameObject.Find("LevelManager") != null) //Gets the levelBounds class if it's in the scene.
         {
             lvl = GameObject.Find("LevelManager").GetComponent<LevelBounds>();
         }

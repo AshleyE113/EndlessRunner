@@ -10,7 +10,6 @@ public class ToMainGame : MonoBehaviour
     Scene scene;
     GameObject Gstatus;
     GameStatus gs;
-    // Start is called before the first frame update
     void Start()
     {
         Gstatus = GameObject.Find("GameStatus");
@@ -25,7 +24,7 @@ public class ToMainGame : MonoBehaviour
 
     public void ButtonMoveScene()
     {
-        SceneManager.LoadScene("MainGame", LoadSceneMode.Single);
+        SceneManager.LoadScene("MainGame", LoadSceneMode.Single); //Loads new scene. Single only loads the Game Scene.
 
         //Resets these values
         gs.p_score = 0;
