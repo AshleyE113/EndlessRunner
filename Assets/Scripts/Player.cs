@@ -19,26 +19,32 @@ public class Player : MonoBehaviour
     public bool isDead = false;
     public bool hitApple = false;
 
+    //For Audio
+    AudioSource jumpSFX;
+    AudioSource collectSFX;
+    [SerializeField] private AudioClip j_sfx;
+    [SerializeField] private AudioClip collect_sfx;
+    [SerializeField] private float sfx_vol = 0.5f;
+
+
     void Start()
     {
         player_rb = GetComponent<Rigidbody>();
+        jumpSFX = GetComponent<AudioSource>();
+        collectSFX = GetComponent<AudioSource>();
         if (GameObject.Find("LevelManager") != null)
         {
             lvl = GameObject.Find("LevelManager").GetComponent<LevelBounds>();
         }
-        else
-        {
-            lvl = gameObject.AddComponent<LevelBounds>() as LevelBounds;
-        }
-       
+        
     }
 
     void Update()
     {
-        Debug.Log(GameStatus.instance.p_score);
+        //Movement Code
         if (isDead == false && GameStatus.instance.startGame)
         {
-            GameStatus.instance.UpdateScore();
+            GameStatus.instance.p_score++;
             transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World); //Makes it move forward 
 
             if (Input.GetKey(KeyCode.RightArrow))
@@ -48,7 +54,6 @@ public class Player : MonoBehaviour
                 {
                     
                     transform.Translate(Vector3.right * Time.deltaTime * sideSpeed);
-                    //Debug.Log("Right");
                 }
             }
 
@@ -61,7 +66,6 @@ public class Player : MonoBehaviour
                 }
             }
         }
-       
 
        if (isDead == true)
        {
@@ -70,8 +74,6 @@ public class Player : MonoBehaviour
             GameStatus.instance.startGame = false;
        }
     }
-    // */
-
 
     //Jump code
     private void FixedUpdate()
@@ -80,6 +82,7 @@ public class Player : MonoBehaviour
         {
             isGrounded = false;
             player_rb.AddForce(0, force, 0, ForceMode.Impulse);
+            jumpSFX.PlayOneShot(j_sfx, sfx_vol);
         }
     }
 
@@ -96,7 +99,9 @@ public class Player : MonoBehaviour
         if (col.gameObject.tag == "Apple")
         {
             hitApple = true;
-            GameStatus.instance.UpdateAppleCount();
+            collectSFX.PlayOneShot(collect_sfx, sfx_vol);
+            GameStatus.instance.a_count++;
+
             Destroy(col.gameObject); //Destroys apple after collision
         }
     }

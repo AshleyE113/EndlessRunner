@@ -23,23 +23,14 @@ public class ToMainGame : MonoBehaviour
         gs = Gstatus.GetComponent<GameStatus>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-      //  scene = SceneManager.GetActiveScene();
-
-        
-       
-        
-    }
-
     public void ButtonMoveScene()
     {
         SceneManager.LoadScene("MainGame", LoadSceneMode.Single);
 
-        gs.ResetScore();
+        //Resets these values
         gs.p_score = 0;
-       // gs.startGame = true; //Once it
+        gs.a_count = 0;
+        gs.startGame = true;
 
     }
 }

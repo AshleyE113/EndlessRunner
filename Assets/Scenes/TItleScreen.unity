@@ -862,8 +862,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Start
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c7c0fd6a317f05e47b5b37adcaf6ab22, type: 2}
-  m_sharedMaterial: {fileID: -4953016151402418788, guid: c7c0fd6a317f05e47b5b37adcaf6ab22, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: baf2fe306ced1e3428f29e30a5a0c976, type: 2}
+  m_sharedMaterial: {fileID: 6889345927870818752, guid: baf2fe306ced1e3428f29e30a5a0c976, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -997,8 +997,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: " Leaps\n     &\nBounds"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c7c0fd6a317f05e47b5b37adcaf6ab22, type: 2}
-  m_sharedMaterial: {fileID: -4953016151402418788, guid: c7c0fd6a317f05e47b5b37adcaf6ab22, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: baf2fe306ced1e3428f29e30a5a0c976, type: 2}
+  m_sharedMaterial: {fileID: 6889345927870818752, guid: baf2fe306ced1e3428f29e30a5a0c976, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
