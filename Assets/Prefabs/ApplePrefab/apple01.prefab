@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3003244232019916780}
   - component: {fileID: 4761932638769133643}
   - component: {fileID: 3003244232019916781}
+  - component: {fileID: 4741675091279160693}
   m_Layer: 0
   m_Name: apple01
   m_TagString: Apple
@@ -97,3 +98,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotSpeed: 1.5
+--- !u!135 &4741675091279160693
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5273834383304321335}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.011271598
+  m_Center: {x: -3.959973e-10, y: 0.0000000022354207, z: 0.0015583588}

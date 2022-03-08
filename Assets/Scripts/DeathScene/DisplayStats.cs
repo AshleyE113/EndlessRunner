@@ -10,18 +10,19 @@ using TMPro;
  */
 public class DisplayStats : MonoBehaviour
 {
-
+    /*
     ScoreKeeper score;
   
-    [SerializeField] private TMP_Text scoreDisplay;
+    //[SerializeField] private TMP_Text scoreDisplay;
     [SerializeField] private TMP_Text appleDisplay;
     TextMeshPro str;
 
     void Start()
     {
        score = gameObject.AddComponent(typeof(ScoreKeeper)) as ScoreKeeper; 
-       scoreDisplay.SetText("Score: " + score.score_display);
+       //scoreDisplay.SetText("Score: " + score.str);
        appleDisplay.SetText("Apples: " + score.appleHolder.ToString());
 
     }
+    */
 }

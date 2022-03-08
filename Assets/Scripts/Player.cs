@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
     public bool isDead = false;
     public bool hitApple = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         player_rb = GetComponent<Rigidbody>();
@@ -27,36 +26,48 @@ public class Player : MonoBehaviour
         {
             lvl = GameObject.Find("LevelManager").GetComponent<LevelBounds>();
         }
+        else
+        {
+            lvl = gameObject.AddComponent<LevelBounds>() as LevelBounds;
+        }
        
     }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World); //Makes it move forward
-
-        if (Input.GetKey(KeyCode.RightArrow))
+        Debug.Log(GameStatus.instance.p_score);
+        if (isDead == false && GameStatus.instance.startGame)
         {
-            if (this.gameObject.transform.position.x < lvl.internalRight)// for the right
+            GameStatus.instance.UpdateScore();
+            transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World); //Makes it move forward 
+
+            if (Input.GetKey(KeyCode.RightArrow))
             {
                 //Sets the bounds for the player to move
-                transform.Translate(Vector3.right * Time.deltaTime * sideSpeed);
-                //Debug.Log("Right");
+                if (this.gameObject.transform.position.x < lvl.internalRight)// for the right
+                {
+                    
+                    transform.Translate(Vector3.right * Time.deltaTime * sideSpeed);
+                    //Debug.Log("Right");
+                }
             }
-        }
-        
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            if (this.gameObject.transform.position.x > lvl.internalLeft) //For the left, error?
-            {
-                transform.Translate(Vector3.left * Time.deltaTime * sideSpeed); //Needed so it can go to the left
-                //Debug.Log("Left");
-            }
-        }
 
-       if (isDead)
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                if (this.gameObject.transform.position.x > lvl.internalLeft)
+                {
+                    transform.Translate(Vector3.left * Time.deltaTime * sideSpeed);
+   
+                }
+            }
+        }
+       
+
+       if (isDead == true)
        {
             speed = 0; //Makes the player stop moving forward
+            sideSpeed = 0; 
+            GameStatus.instance.startGame = false;
        }
     }
     // */
@@ -85,6 +96,8 @@ public class Player : MonoBehaviour
         if (col.gameObject.tag == "Apple")
         {
             hitApple = true;
+            GameStatus.instance.UpdateAppleCount();
+            Destroy(col.gameObject); //Destroys apple after collision
         }
     }
 
