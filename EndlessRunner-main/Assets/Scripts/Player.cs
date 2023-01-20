@@ -70,23 +70,19 @@ public class Player : MonoBehaviour
             }
         }
 
-       if (isDead == true)
-       {
-            speed = 0; //Makes the player stop moving forward
-            sideSpeed = 0; 
-            GameStatus.instance.startGame = false;
-       }
-    }
-
-    //Jump code
-    private void FixedUpdate()
-    {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             isGrounded = false;
             player_rb.AddForce(0, force, 0, ForceMode.Impulse);
             jumpSFX.PlayOneShot(j_sfx, sfx_vol);
         }
+
+       if (isDead == true)
+       {
+            speed = 0; //Makes the player stop moving forward
+            sideSpeed = 0; 
+            GameStatus.instance.startGame = false;
+       }
     }
 
     private void OnCollisionEnter(Collision col)
